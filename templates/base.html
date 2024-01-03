@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script> 
+    <title> {% block title %}{% endblock title %}</title>
+</head>
+<body>
+    <!--Navbar Section-->  
+    <nav class="py-6 px-8 bg-slate-800 flex justify-between items-center">
+      <a href="{% url "home" %}" class="text-white text-xl">Tracker</a> 
+
+        <div class="space-x-4">
+            <a href="{% url "Core:about" %}" class="text-white text-xl">About</a> 
+           
+            {% if request.user.is_authenticated %} 
+             <a href="{% url "Project_Management:project-list" %}" class="text-white text-xl">OnBoard</a>
+             <a href="{% url "account:login" %}" class="py-4 px-8 bg-red-600 text-white rounded">Logout</a> 
+             
+            {% else %}
+            <a href="{% url "account:login" %}" class="py-4 px-8 bg-sky-600 text-white rounded">Login</a> 
+            <a href="{% url "account:sign-up" %}" class="py-4 px-8 bg-slate-600 text-white rounded">Signup</a>
+            {% endif %}
+
+        </div>
+      
+    </nav> 
+
+    <!--Main Section--> 
+    <main class="py-6 px-8">
+        {% block content %}
+        {% endblock content %}
+    </main> 
+
+    <!-- Footer Section --> 
+    <footer class="py-6 px-8 bg-slate-800  text-center text-white"> 
+        Copyright (c) Moinul Islam 2024 - Sunshine IT Solution LTD 
+
+    </footer> 
+
+    
+</body>
+</html>

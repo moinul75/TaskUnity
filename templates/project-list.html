@@ -1,0 +1,48 @@
+{% extends "base.html" %} 
+{% load static %} 
+{% block title %}Project List{% endblock title %} 
+{% block content %}
+    <!--Main Section--> 
+    <main class="py-6 px-8">
+        <header class="py-8 px-8"> 
+            <h1 class="text-3xl">Projects</h1> 
+
+            <a class="py-4 px-6 bg-sky-600 rounded inline-block text-lg text-white mt-4" href="#">Add Project</a>  
+
+            <div class="grid grid-cols-4 mt-6 gap-4 "> 
+                <a href="{% url "Project_Management:details-prjects" %}">
+                    <div class="py-6 px-6 bg-slate-200">
+                        <h2 class="text-xl">Project Title</h2> 
+                        <p class="text-sm text-slate-600 mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis molestias alias in atque recusandae ab adipisci quae dignissimos nisi optio?</p>
+                    </div> 
+                </a>
+                <div class="py-6 px-6 bg-slate-200">
+                    <h2 class="text-xl">Project Title</h2> 
+                    <p class="text-sm text-slate-600 mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis molestias alias in atque recusandae ab adipisci quae dignissimos nisi optio?</p>
+                </div> 
+                <div class="py-6 px-6 bg-slate-200">
+                    <h2 class="text-xl">Project Title</h2> 
+                    <p class="text-sm text-slate-600 mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis molestias alias in atque recusandae ab adipisci quae dignissimos nisi optio?</p>
+                </div> 
+                <div class="py-6 px-6 bg-slate-200">
+                    <h2 class="text-xl">Project Title</h2> 
+                    <p class="text-sm text-slate-600 mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis molestias alias in atque recusandae ab adipisci quae dignissimos nisi optio?</p>
+                </div> 
+                <div class="py-6 px-6 bg-slate-200">
+                    <h2 class="text-xl">Project Title</h2> 
+                    <p class="text-sm text-slate-600 mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis molestias alias in atque recusandae ab adipisci quae dignissimos nisi optio?</p>
+                </div> 
+                
+
+
+            </div>
+
+
+        
+
+           </div>
+        </header>
+    </main>  
+
+{% endblock content %}
+
